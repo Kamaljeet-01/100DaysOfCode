@@ -52,3 +52,22 @@ class Solution {
         return Arrays.copyOf(result, index);
     }
 }
+
+// Checking Palindrome Number or not:
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x >= 0){
+            int rev=0;
+            int temp=x;
+            int rem =0;
+            while(x>0){
+                rem = x%10;
+                rev = rev*10 + rem;
+                x=x/10;
+            }
+            if(temp==rev) return true;
+            else if (temp==0) return true;
+            else return false;
+        }else return false;                // as X=-121 after reversing X = 121- So it is not palindrome number.
+    }
+}
