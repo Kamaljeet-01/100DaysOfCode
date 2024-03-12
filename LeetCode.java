@@ -71,3 +71,25 @@ class Solution {
         }else return false;                // as X=-121 after reversing X = 121- So it is not palindrome number.
     }
 }
+
+// Squares of a Sorted Array
+
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+   int n = nums.length;
+  int[] result = new int[n];        
+  int i = 0, j = n - 1;            //taking 2 pointers
+  for (int k = n - 1; k >= 0; k--) {
+    int sqi = nums[i] * nums[i];    //square of elements
+    int sqj = nums[j] * nums[j];
+    if (sqi > sqj) {            //sorting the array using 2 pointers
+      result[k] = sqi;
+      i++;
+    } else {
+      result[k] = sqj;
+      j--;
+    }
+  }
+  return result;
+    }
+}
