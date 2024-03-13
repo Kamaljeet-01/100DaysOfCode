@@ -118,3 +118,21 @@ class Solution {
         return -1;
     }
 }
+
+//updates code for Pivot integer :
+
+class Solution {
+    public int pivotInteger(int n) {
+        int totalSum = n * (n + 1) / 2; // Sum of numbers from 1 to n
+        int leftSum = 0;
+
+        for (int i = 1; i <= n; i++) {
+            int rightSum = totalSum - i - leftSum; // Calculate right sum
+            if (leftSum == rightSum) {
+                return i; // Found the pivot
+            }
+            leftSum += i; // Update left sum for the next iteration
+        }
+        return -1; // No pivot found
+    }
+}
