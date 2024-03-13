@@ -93,3 +93,28 @@ class Solution {
   return result;
     }
 }
+
+
+//Problem Of the Day 
+//Finding the Pivot Integer:
+
+class Solution {
+    public int pivotInteger(int n) {
+        for(int i=1;i<=n;i++){
+            int sum1=0;
+            int sum2=0;
+            //for left sum
+            for(int j=1;j<i;j++){
+                sum1+=j;
+            }
+            //for right sum
+            for(int k=(i + 1);k<=n;k++){
+                sum2+=k;
+            }
+            if(sum1==sum2){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
