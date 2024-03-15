@@ -159,3 +159,28 @@ class Solution {
         return left;
     }
 }
+
+
+//Product of Array Except Self :
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int n = nums.length;
+        int[] result = new int[n];
+        
+        // Calculate prefix products and store them in the result array
+        result[0] = 1;
+        for (int i = 1; i < n; i++) {
+            result[i] = result[i - 1] * nums[i - 1];
+        }
+        
+        int suffixProduct = 1;
+        // Calculate suffix products and multiply them with prefix products stored in result array
+        for (int i = n - 1; i >= 0; i--) {
+            result[i] *= suffixProduct;
+            suffixProduct *= nums[i];
+        }
+        
+        return result;
+    }
+}
