@@ -228,3 +228,39 @@ class Solution {
         }
     }
 }
+
+// Find the winner of Array Game:
+
+class Solution {
+    public int getWinner(int[] arr, int k) {
+        int n = arr.length;
+        int winner = 0; // Index of the current winner
+        int count = 0; // Consecutive wins for the winner
+
+        // Two pointers: left (0) and right (1)
+        for (int left = 0, right = 1; right < n; right++) {
+            if (arr[left] < arr[right]) {
+                winner = right; // Update winner if right element is larger
+                count = 1; // Reset count for consecutive wins
+                left = right; // Move left pointer to the new winner's position
+            } else {
+                count++; // Increment count if the current winner maintains lead
+            }
+
+            // Check for winner if current element is not the initial element (arr[0])
+            if (count == k && arr[winner] != arr[0]) {
+                return arr[winner]; // Return winner if consecutive wins reach k (excluding arr[0])
+            }
+        }
+
+        // If loop completes, check for winner other than arr[0]
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > arr[0]) {
+                return arr[i]; // Return winner if any element is larger than arr[0]
+            }
+        }
+
+        // If no winner found, return arr[0] (default winner)
+        return arr[0];
+    }
+}
