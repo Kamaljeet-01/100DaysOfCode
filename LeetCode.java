@@ -279,3 +279,19 @@ class Solution {
     return k;
     }
 }
+
+//Array Rotation: (Overwriting method : Only for short length arrays ):
+
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int i=0;
+        while(i<k){
+        int temp = nums[nums.length - 1];
+        for(int j=nums.length - 1;j>0;j--){
+            nums[j]=nums[j - 1];
+        }
+        nums[0]=temp;
+        i++;
+    } 
+    }
+}
