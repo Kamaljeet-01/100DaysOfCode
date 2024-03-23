@@ -295,3 +295,23 @@ class Solution {
     } 
     }
 }
+
+
+//Add 2 number without using operators :
+
+class Solution {
+    public int getSum(int a, int b) {
+		while (b != 0) {
+			int sum = a ^ b; // XOR operation to calculate
+							// sum without carry
+			int carry
+				= (a & b)
+				<< 1; // AND and left shift operation to
+						// calculate carry
+			a = sum;
+			b = carry;
+		}
+		return a;
+
+    }
+}
