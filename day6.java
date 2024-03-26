@@ -40,3 +40,28 @@ class Solution {
         return l;
     }
 }
+
+
+//Duplicate element in array :
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        Scanner sc = new Scanner(System.in);
+        for(int i=0;i<5;i++){
+            arr[i]=sc.nextInt();
+        }
+        //Finding duplicate  2 5 3 5 5
+        for(int i=0;i<5;i++){
+            for(int j=0;j<5;j++){
+                if(i > j && arr[i]==arr[j] ){
+                    //System.out.println(arr[i]);
+                    break;
+                }else if(arr[i] == arr[j]){
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+        
+    }
+}
