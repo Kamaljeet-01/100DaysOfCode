@@ -56,3 +56,28 @@ class opps {
 		}
 	}
 }
+//Error is there in this code :
+import java.util.*;
+class Rectangle{
+    int length;
+    int width;
+    void input(){
+        Scanner sc = new Scanner(System.in);
+        length=sc.nextInt();
+        width=sc.nextInt();
+    }
+}
+class Area extends Rectangle{
+    void calculateArea(){
+        int area = length*width;
+        System.out.println("Area: " +area);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Area area= new Area();
+        area.input();
+        area.calculateArea();
+    }
+}
