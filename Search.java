@@ -27,3 +27,39 @@ class Search {
         }
     }
 }
+
+
+// Merge two arrays into another one and sort it:
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+   int n=sc.nextInt();
+    int m=sc.nextInt();
+    int[] arr = new int[n];
+    int[] arr2 = new int[m];
+    int s=n+m;
+    int count=0;
+  int[] arr3 = new int[s];
+  for(int i=0;i<n;i++){
+      arr[i]=sc.nextInt();
+  }
+  for(int i=0;i<m;i++){
+      arr2[i]=sc.nextInt();
+  }
+  for(int i=0;i<s;i++){
+      if(i<n){
+      arr3[i]=arr[i];
+  }
+     else if(i>=n){
+          arr3[i]=arr2[count];
+          count++;
+      }
+  }
+  for(int i=0;i<s;i++){
+      System.out.print(arr3[i]+" ");
+  }
+
+    }
+}
