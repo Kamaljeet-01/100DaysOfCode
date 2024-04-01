@@ -63,3 +63,60 @@ class HelloWorld {
 
     }
 }
+
+
+//Stack Question without implementing Stack. (will edit later):
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+int[] arr = new int[10];
+    
+int n;
+
+int count =9 ;
+while(true){
+   n = sc.nextInt(); 
+int a;
+
+if(n==1){
+    a = sc.nextInt();
+    arr[count]=a;
+    count--;
+    System.out.println("Element "+a+" pushed onto the stack.");
+    
+}
+    else if(n==2){
+        if(count<=9 || arr[count]!=0){
+        System.out.println("Element "+arr[count + 1]+" Popped from the stack.");
+        arr[count + 1]=0;
+        count++;}
+        else if(count>9){
+            System.out.println("Stack Underflow. Cannot perform pop operation.");
+        }
+    }
+    else if(n==3){
+        if(count == 9){
+            System.out.println("Stack is empty.");
+        }
+        else {
+        System.out.println("Elements in the stack: ");
+        for(int i=0;i<10;i++){
+            if(arr[i] != 0){
+            System.out.print(arr[i]+ " ");}
+        }
+        System.out.println();}
+    }
+    else if(n==4){
+        System.out.println("Exiting the program.");
+        break;
+    }
+    else{
+        System.out.println("Invalid choice.");
+    }
+     
+    
+}
+    }
+}
