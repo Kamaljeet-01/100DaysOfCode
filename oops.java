@@ -61,23 +61,21 @@ import java.util.*;
 class Rectangle{
     int length;
     int width;
-    void input(){
-        Scanner sc = new Scanner(System.in);
-        length=sc.nextInt();
-        width=sc.nextInt();
+    Rectangle(double length,double width){
+	this.width=width;
+        this.length=length;
     }
-}
-class Area extends Rectangle{
-    void calculateArea(){
-        int area = length*width;
-        System.out.println("Area: " +area);
-    }
+    double calculateArea(){
+        return length*width;
+    } 
 }
 class Main {
     public static void main(String[] args) {
-        System.out.println("Try programiz.pro");
-        Area area= new Area();
-        area.input();
-        area.calculateArea();
+	Scanner sc = new Scanner(system.in);
+	    double length = sc.nextDouble();
+	    double width = sc.nextDouble();
+	    Rectangle rectangle = new Rectangle(length,width);
+        double area= rectangle.calculateArea();
+        System.out.println("Area of Rectangle is : "+area);
     }
 }
