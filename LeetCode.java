@@ -337,3 +337,26 @@ class Solution {
         return duplicates;
     }
 }
+
+//Factorial of number using recursion:
+
+import java.util.*;
+
+class HelloWorld {
+    public static int fac(int n){
+        int factorial=1;
+        if(n==0 || n==1){
+            return 1;
+        }else {
+            factorial = n*fac(n - 1);
+        }
+        return factorial;
+    }
+    public static void main(String[] args) {
+    int n; 
+    Scanner sc = new Scanner(System.in);
+    n= sc.nextInt();
+    int result = fac(n);
+    System.out.println(result);
+    }
+}
