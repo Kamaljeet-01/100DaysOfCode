@@ -65,3 +65,69 @@ class HelloWorld {
         
     }
 }
+
+//Simple Calculator :
+
+import java.util.Scanner;
+
+public class SimpleCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.print("Enter an arithmetic expression (operand1 operator operand2) or 'q' to quit: ");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("q")) {
+                exit = true;
+                System.out.println("Exiting...");
+                continue;
+            }
+
+            String[] tokens = input.split(" ");
+            if (tokens.length != 3) {
+                System.out.println("Invalid input! Please provide an expression in the form of operand1 operator operand2.");
+                continue;
+            }
+
+            int operand1, operand2;
+            char operator;
+            try {
+                operand1 = Integer.parseInt(tokens[0]);
+                operator = tokens[1].charAt(0);
+                operand2 = Integer.parseInt(tokens[2]);
+            } catch (NumberFormatException | IndexOutOfBoundsException e) {
+                System.out.println("Invalid input! Please provide valid integers for operands.");
+                continue;
+            }
+
+            int result;
+            switch (operator) {
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+                case '/':
+                    if (operand2 == 0) {
+                        System.out.println("Error: Division by zero.");
+                        continue;
+                    }
+                    result = operand1 / operand2;
+                    break;
+                default:
+                    System.out.println("Invalid operator! Please use one of the following: +, -, *, /");
+                    continue;
+            }
+
+            System.out.println("Result: " + result);
+        }
+
+        scanner.close();
+    }
+}
