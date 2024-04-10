@@ -360,3 +360,35 @@ class HelloWorld {
     System.out.println(result);
     }
 }
+
+
+//Array Game:
+class Solution {
+    // array rotate
+    public  void Rotate(int[] arr){  
+        int temp=arr[1];    
+	    for(int i=0;i<(arr.length - 1);i++){
+		    arr[i]=arr[i+1];
+	    }
+        arr[arr.length -1] = temp;
+    }
+    public int getWinner(int[] arr, int k) {
+    int count = 0 ; // winning count
+    while(count < k){
+        if(arr[1] > arr[0]){
+	        Rotate(arr);
+	        count=1;
+        }else {
+            Rotate(arr);
+            int temp = arr[1];
+            for(int i=1;i<arr.length - 1;i++){
+                arr[i]=arr[i+1];
+            }
+            arr[arr.length - 1]=temp;
+            count++;
+        }
+    }
+//returning winner
+return arr[0];
+    }
+}
