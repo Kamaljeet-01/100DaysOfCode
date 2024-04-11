@@ -1,3 +1,4 @@
+/This code is written in java
 public class day1{
     public static void deleteArray(int[] arr,int key,int idx){
         for(int i = idx ;i<arr.length - 1;i++){
