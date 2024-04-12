@@ -41,3 +41,17 @@ public class String {
         search(pat, txt);
     }
 }
+
+
+//String split
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        String[] sArr = s.split("");
+        for(int i=0;i<sArr.length;i++){
+            System.out.print(sArr[i]+" ");
+        }
+    }
+}
