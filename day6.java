@@ -132,7 +132,7 @@ public class SimpleCalculator {
     }
 }
 
-
+//Square Root of number is integer or not//
 import java.util.*;
 
 class HelloWorld {
