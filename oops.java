@@ -79,3 +79,20 @@ class Main {
         System.out.println("Area of Rectangle is : "+area);
     }
 }
+
+
+Class:
+
+In Java, a class is a blueprint or a template for creating objects.
+It defines the properties (attributes) and behaviors (methods) that objects of that type will have.
+Classes encapsulate data for the object and define the operations that can be performed on that data.
+Object:
+
+An object is an instance of a class.
+It is a tangible entity that represents a specific instance of the class, with its own unique state and behavior.
+Objects are created using the new keyword followed by the class name and may have their own distinct values for the class's properties.
+Instance:
+
+In the context of Java, an instance typically refers to a specific occurrence or realization of a class.
+An instance is essentially a concrete manifestation of a class, representing one specific example of that class.
+Each time you create a new object using a class constructor, you are creating an instance of that class.
