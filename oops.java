@@ -96,3 +96,31 @@ Instance:
 In the context of Java, an instance typically refers to a specific occurrence or realization of a class.
 An instance is essentially a concrete manifestation of a class, representing one specific example of that class.
 Each time you create a new object using a class constructor, you are creating an instance of that class.
+
+
+public class Car {
+    // Properties
+    String make;
+    String model;
+    int year;
+    
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+    
+    // Method
+    public void drive() {
+        System.out.println("The " + year + " " + make + " " + model + " is driving.");
+    }
+}
+
+// And creating objects (instances) of that class would look like this:
+Car myCar = new Car("Toyota", "Camry", 2022);
+Car anotherCar = new Car("Honda", "Accord", 2023);
+
+// Calling method on objects
+myCar.drive();
+anotherCar.drive();
