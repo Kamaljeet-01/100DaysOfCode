@@ -55,3 +55,37 @@ class HelloWorld {
         }
     }
 }
+
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class EliminateRepeatedLetters {
+    
+    public static String eliminateRepeatedLetters(String word) {
+        Set<Character> seen = new HashSet<>();
+        StringBuilder result = new StringBuilder();
+        
+        for (char ch : word.toCharArray()) {
+            if (!seen.contains(ch)) {
+                result.append(ch);
+                seen.add(ch);
+            }
+        }
+        
+        return result.toString();
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+        
+        String result = eliminateRepeatedLetters(word);
+        System.out.println("Word after eliminating repeated letters: " + result);
+        
+        scanner.close();
+    }
+}
+
