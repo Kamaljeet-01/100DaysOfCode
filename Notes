@@ -1,0 +1,15 @@
+String
+= Basically String is an object that represent the sequence of characters.
+
+>  Immutable object
+>  Can be defined by String literals and "new" keyword.
+>  to use String methods we have to import "java.lang.String" class 
+>  String literals represents the sequence of characters inside a double quotes.
+>  String objects are created in unique memory called String Constant Pool
+>  SCP is used foe efficient memory usage in java
+>  As string are immmutable so we have to explicitly change the value of object and it will affect the  other refernce variable also .Like 4 refernce variable refer to a same object, and 1st 	refernce variable try to change the value of object so it will affect all the 3 other refernce variable	that's why strings are immutable in java for thread safety and 	all.
+Here are some reasons:
+.Class Loader: ClassLoader in Java uses a String object as an argument. Consider, if the String object 	is modifiable, the value might be changed and the class that is supposed to be loaded 	might be different.
+.Thread Safety : As the String object is immutable we don't have to take care of the synchronization that is required while sharing an object across multiple threads.
+.Security : Consider an example of banking software. The username and password cannot be modified by any intruder because String objects are immutable. This can make the application 	program more secure.
+.Heap Space: The immutability of String helps to minimize the usage in the heap memory. When we try to 	declare a new String object, the JVM checks whether the value already exists in the 	String or not. If it exists, the same value is assigned to the new object. This feature allows Java use the heap space efficiently.
