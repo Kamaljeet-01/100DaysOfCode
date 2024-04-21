@@ -13,3 +13,6 @@ Here are some reasons:
 .Thread Safety : As the String object is immutable we don't have to take care of the synchronization that is required while sharing an object across multiple threads.
 .Security : Consider an example of banking software. The username and password cannot be modified by any intruder because String objects are immutable. This can make the application 	program more secure.
 .Heap Space: The immutability of String helps to minimize the usage in the heap memory. When we try to 	declare a new String object, the JVM checks whether the value already exists in the 	String or not. If it exists, the same value is assigned to the new object. This feature allows Java use the heap space efficiently.
+
+
+String Methods:
