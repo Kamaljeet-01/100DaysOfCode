@@ -16,3 +16,5 @@ Here are some reasons:
 
 
 String Methods:
+str.concat(str2); //concatinates 2 strings
+str.length(); //return the length of string
