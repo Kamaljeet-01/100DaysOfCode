@@ -18,3 +18,11 @@ Here are some reasons:
 String Methods:
 str.concat(str2); //concatinates 2 strings
 str.length(); //return the length of string
+charAt()	Returns the character at the specified index (position)	char
+codePointAt()	Returns the Unicode of the character at the specified index	int
+codePointBefore()	Returns the Unicode of the character before the specified index	int
+codePointCount()	Returns the number of Unicode values found in a string.	int
+compareTo()	Compares two strings lexicographically	int
+compareToIgnoreCase()	Compares two strings lexicographically, ignoring case differences	int
+concat()	Appends a string to the end of another string	String
+contains()	Checks whether a string contains a sequence of characters	boolean
