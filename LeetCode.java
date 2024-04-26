@@ -392,5 +392,21 @@ class Solution {
 return arr[0];
     }
 }
-
+//Power of 4:
+class Leetcode{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int num=sc.nextInt();
+		int count=0;
+		while(num>1){
+			if(num==1){
+			break;}
+			else{
+				num=num/4;
+				count++;
+			}
+		}
+		System.out.println("Number you entered is 4 raised to power "+count);
+	}
+}
 //EOF
