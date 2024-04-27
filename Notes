@@ -25,4 +25,3 @@ codePointCount()	Returns the number of Unicode values found in a string.	int
 compareTo()	Compares two strings lexicographically	int
 compareToIgnoreCase()	Compares two strings lexicographically, ignoring case differences	int
 concat()	Appends a string to the end of another string	String
-contains()	Checks whether a string contains a sequence of characters	boolean
