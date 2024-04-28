@@ -89,3 +89,31 @@ public class EliminateRepeatedLetters {
     }
 }
 
+
+//Error is there ,will debug it later
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        char[] arr = new char[n];
+        String str = sc.nextLine();
+        String str2 = sc.nextLine();
+        for(int i=0;i<n;i++){
+            arr[i]=str.charAt(i);
+        }
+        char[] arr2 = new char[n];
+         for(int i=0;i<n;i++){
+            arr2[i]=str2.charAt(i);
+        }
+        
+        //matching characters:
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(arr[i]==arr2[j]){
+                    System.out.println(arr[i]);
+                }else continue;
+            }
+        }
+    }
+}
