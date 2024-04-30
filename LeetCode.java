@@ -362,7 +362,8 @@ class HelloWorld {
 }
 
 
-//Array Game:
+//Array Game: Error is there,will remove it soon.
+
 class Solution {
     // array rotate
     public  void Rotate(int[] arr){  
@@ -392,6 +393,7 @@ class Solution {
 return arr[0];
     }
 }
+
 //Power of 4:
 class Leetcode{
 	public static void main(String[] args){
