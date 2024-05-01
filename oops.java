@@ -124,3 +124,53 @@ Car anotherCar = new Car("Honda", "Accord", 2023);
 // Calling method on objects
 myCar.drive();
 anotherCar.drive();
+
+
+
+
+//Constructor practice:
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args) {
+        
+         
+          
+        Student obj = new Student(12, "Sabya", 99f);
+        
+        
+       /*Doing this without constructor
+       obj.rno=21;
+       obj.name="Sabyasachee Thakur";
+       obj.marks=99.99;
+       */
+       //System.out.println(obj.name);
+       System.out.println(obj.rno);
+       System.out.println(obj.marks);
+       System.out.println(obj.name);
+      
+       //obj.changename("sonu");
+      // obj.greet();
+    }
+    
+}
+class Student{
+     Scanner sc = new Scanner(System.in);
+    int rno; 
+    String name;
+    float marks;
+    //This is a constructor
+    void greet(){
+        System.out.println("Hello "+name);
+    }
+    void changename(String newname){
+        name = newname;
+    }
+    Student(int roll, String nam, float marks){
+     rno=roll;
+      name=nam;
+       this.marks=marks;
+    }
+    
+}
