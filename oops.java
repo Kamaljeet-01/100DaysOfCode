@@ -174,3 +174,29 @@ class Student{
     }
     
 }
+
+
+//Without generic function:
+public class Pair {
+    private Object first;
+    private Object second;
+
+    public Pair(Object first, Object second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public Object getFirst() {
+        return first;
+    }
+
+    public Object getSecond() {
+        return second;
+    }
+
+    public static void main(String[] args) {
+        Pair pair = new Pair(10, "Hello");
+        System.out.println("First: " + pair.getFirst());
+        System.out.println("Second: " + pair.getSecond());
+    }
+}
