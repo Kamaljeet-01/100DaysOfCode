@@ -140,3 +140,36 @@ public class Person {
         System.out.println(person.toString()); // Output: Person{name='John', age=30}
     }
 }
+
+
+
+
+* * StringTokenizer * *
+
+import java.util.StringTokenizer;  
+public class Simple{  
+ public static void main(String args[]){  
+   StringTokenizer st = new StringTokenizer("my name is khan"," ");  
+     while (st.hasMoreTokens()) {  
+         System.out.println(st.nextToken());  
+     }  
+   }  
+}  
+Output:
+
+my
+name
+is
+khan
+
+import java.util.*;  
+  
+public class Test {  
+   public static void main(String[] args) {  
+       StringTokenizer st = new StringTokenizer("my,name,is,khan");  
+        
+      // printing next token  
+      System.out.println("Next token is : " + st.nextToken(","));  
+   }      
+}  
+
