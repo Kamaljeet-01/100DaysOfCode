@@ -173,3 +173,70 @@ public class Test {
    }      
 }  
 
+
+//taking input of string array with undefined size.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter elements of the array separated by spaces:");
+        String inputLine = scanner.nextLine();
+
+        // Split the input line into individual strings
+        String[] array = inputLine.split("\\s+");
+
+        // Print the array
+        System.out.println("Array elements:");
+        for (String element : array) {
+            System.out.println(element);
+        }
+
+        scanner.close();
+    }
+
+
+String methods :
+1. charAt(); 
+
+String str = "Hello";
+char ch = str.charAt(1); // ch will be 'e'
+
+
+2. compareTo();
+
+String str1 = "apple";
+String str2 = "banana";
+int comparison = str1.compareTo(str2); // comparison will be a negative integer
+
+
+3. concat();
+
+String str1 = "Hello";
+String str2 = "World";
+String concatenatedStr = str1.concat(" ").concat(str2); // concatenatedStr will be "Hello World"
+
+
+4. contains();
+
+String str = "Hello, World!";
+boolean containsComma = str.contains(","); // containsComma will be true
++
+
+
+5. endsWith();
+
+String str = "Hello, World!";
+boolean endsWithWorld = str.endsWith("World!"); // endsWithWorld will be true
+
+
+6. equals();
+
+String str1 = "hello";
+String str2 = "hello";
+boolean isEqual = str1.equals(str2); // isEqual will be true
+
+
+
