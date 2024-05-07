@@ -292,6 +292,63 @@ String result = String.join("-", "apple", "orange", "banana"); // result will be
 String str = "Hello, World!";
 int lastIndex = str.lastIndexOf('l'); // lastIndex will be 10
 
+16. length();
+
+String str = "Hello";
+int length = str.length(); // length will be 5
+
+
+17. replace();
+
+String str = "Hello, World!";
+String replacedStr = str.replace('o', 'x'); // replacedStr will be "Hellx, Wxrld!"
+
+
+18. replaceAll();
+
+String str = "Hello, World!";
+String replacedStr = str.replaceAll("[aeiou]", "*"); // replacedStr will be "H*ll*, W*rld!"
+
+
+19.  split();
+
+String str = "apple,orange,banana";
+String[] parts = str.split(","); // parts will be {"apple", "orange", "banana"}
+
+
+20. startsWith();
+
+String str = "Hello, World!";
+boolean startsWithHello = str.startsWith("Hello"); // startsWithHello will be true
+
+
+21. substring();
+
+String str = "Hello, World!";
+String substr = str.substring(7); // substr will be "World!"
+
+//another way: 
+
+String str = "Hello, World!";
+String substr = str.substring(0, 5); // substr will be "Hello"
+
+22. toCharArray();
+
+String str = "Hello";
+char[] charArray = str.toCharArray(); // charArray will be {'H', 'e', 'l', 'l', 'o'}
+
+
+23. trim();
+
+String str = "   Hello   ";
+String trimmedStr = str.trim(); // trimmedStr will be "Hello"
+
+
+24. valueOf();
+
+int num = 123;
+String str = String.valueOf(num); // str will be "123"
+
 
 
 
