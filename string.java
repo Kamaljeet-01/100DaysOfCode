@@ -238,5 +238,60 @@ String str1 = "hello";
 String str2 = "hello";
 boolean isEqual = str1.equals(str2); // isEqual will be true
 
+7. equalsIgnoreCase();
+
+String str1 = "hello";
+String str2 = "Hello";
+boolean isEqualIgnoreCase = str1.equalsIgnoreCase(str2); // isEqualIgnoreCase will be true
+
+
+8. format();
+
+String formattedStr = String.format("The value of pi is %.2f", Math.PI); // formattedStr will be "The value of pi is 3.14"
+
+
+9. getBytes();
+
+String str = "Hello";
+byte[] byteArray = str.getBytes(); // byteArray will contain the byte representation of "Hello"
+
+
+10. getChars();
+
+String str = "Hello";
+char[] charArray = new char[5];
+str.getChars(0, 5, charArray, 0); // Copies "Hello" into charArray
+
+
+
+11. indexOf();
+
+String str = "Hello";
+int index = str.indexOf('e'); // index will be 1
+
+
+12. intern();
+
+String str1 = new String("Hello");
+String str2 = str1.intern(); // str2 will refer to the interned string "Hello"
+
+
+13. isEmpty();
+
+String str = "";
+boolean isEmpty = str.isEmpty(); // isEmpty will be true
+
+
+14. join();
+
+String result = String.join("-", "apple", "orange", "banana"); // result will be "apple-orange-banana"
+
+
+15. lastIndexOf();
+ 
+String str = "Hello, World!";
+int lastIndex = str.lastIndexOf('l'); // lastIndex will be 10
+
+
 
 
