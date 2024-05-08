@@ -350,5 +350,28 @@ int num = 123;
 String str = String.valueOf(num); // str will be "123"
 
 
+//toString() method:
+
+
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Override toString() to provide a custom string representation
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', age=" + age + "}";
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person("John", 30);
+        System.out.println(person.toString()); // Output: Person{name='John', age=30}
+    }
+}
 
 
