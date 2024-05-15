@@ -232,11 +232,6 @@ String str = "Hello, World!";
 boolean endsWithWorld = str.endsWith("World!"); // endsWithWorld will be true
 
 
-6. equals();
-
-String str1 = "hello";
-String str2 = "hello";
-boolean isEqual = str1.equals(str2); // isEqual will be true
 
 7. equalsIgnoreCase();
 
