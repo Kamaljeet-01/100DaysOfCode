@@ -399,4 +399,18 @@ public class Main {
         }
     }
 }
+What is method overriding? Can you provide an example?
+Method overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. For example:
 
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
