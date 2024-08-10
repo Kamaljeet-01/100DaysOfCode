@@ -71,3 +71,27 @@ int main() {
     fabonacciSeries(a);
     return 0;
 }
+
+
+//Checking for prime number:
+
+//CODE :
+
+#include <iostream>
+using namespace std;
+string isPrime(int x){
+    if(x==1 || x==0) return "NO";
+    for(int i=2;i<=x/2;i++){
+        if(x%i==0){
+            return "NO";
+        }
+    }
+    return "YES";
+}
+int main() {
+    int a;
+    cin>>a;
+    string result = isPrime(a);
+    cout <<a<< " is Prime ? "<<result<<endl;
+    return 0;
+}
