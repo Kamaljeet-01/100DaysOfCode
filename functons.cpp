@@ -95,3 +95,46 @@ int main() {
     cout <<a<< " is Prime ? "<<result<<endl;
     return 0;
 }
+
+//Prime Numbers between two numbers :
+
+//CODE:
+#include <iostream>
+using namespace std;
+bool isPrime(int x){
+    if(x==1 || x==0) return false;
+    for(int i=2;i<=x/2;i++){
+        if(x%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int main() {
+    int a;
+    cin>>a;
+    for(int i=1;i<=a;i++){
+    (isPrime(i))?cout<<i<<" ":cout<<"";
+    }
+    return 0;
+}
+
+//Factorial of  a number:
+//CODE:
+
+#include <iostream>
+using namespace std;
+int factorial(int x){
+    if(x==1 || x==0) return 1;
+    int fac=1;
+    for(int i=1;i<=x;i++){
+        fac*=i;
+    }
+    return fac;;
+}
+int main() {
+    int a;
+    cin>>a;
+    cout<<"Factorial of "<<a<<" is "<<factorial(a)<<endl;
+    return 0;
+}
