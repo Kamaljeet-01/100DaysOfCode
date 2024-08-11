@@ -217,3 +217,36 @@ int main()
 }
 */
 //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Number triangle :
+
+1 
+2 5 
+3 6 8 
+4 7 9 10 
+
+//CODE : 
+//In this code I fixed the number of rows but we can take input from user. :)
+#include <iostream>
+using namespace std;
+int main() {
+    int num=1;
+    for(int i=1;i<=4;i++){
+        int num =i;
+        for(int j=1;j<=i;j++){
+            int gap=j-1;
+            int sum=(4-i)+(i-gap);
+            if(i>=j) {
+                if(j==1) {
+                    cout<<i<<" ";
+                }else{
+                    num+=sum;
+                    cout<<num<<" ";
+                }
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
